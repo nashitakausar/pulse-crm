@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}PulseCRM{% endblock %}
+
+{%block content %}
+<div class="text-center mt-5">
+	<div class="fade-in-left">
+	<h1  class="display-4 fw-bold pulse">Welcome to <b>PulseCRM.</b></h1>
+	</div>
+	<p class="lead">Stay in rhythm with your customers.</p>
+	<a href="/customers" class="btn btn-primary btn-lg mt-3">View Customers</a>
+	<a href="/add-customer" class="btn btn-primary btn-success btn-lg mt-3">Add New Customers</a>
+</div>
+
+<div class="container mt-5">
+	<div class="row">
+		<div class="col-md-4">
+			<div class="fade-in">
+			<h3><b>Organized</b></h3>
+			<p>Keep all of your customer information neatly organized & easy to access.</p>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="fade-in">
+			<h3><b>Effortless Management</b></h3>
+			<p>Add, edit, and delete customers with just a few clicks.<br> No hassle, no clutter.</p>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="fade-in">
+			<h3><b>Secure & Reliable</b></h3>
+			<p>Built with modern technology to ensure your data stays safe and sound.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container mt-5 text-center">
+    <h2 class="fw-bold">Why Pulse CRM?</h2>
+    <p class="lead text-muted mt-3">
+        PulseCRM helps you stay connected, organized, and growing, with effortless customer management at your fingertips.
+    </p>
+</div>
+
+<footer class="text-center mt-5 mb-3 text-muted">
+    <p>&copy; 2025 PulseCRM. Built by Nashita Kausar with 💻 and ❤️.</p>
+    <a href="https://www.linkedin.com/in/nashita-kausar-524b87324/" target="_blank" class="text-muted me-3">LinkedIn</a>
+</footer>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}PulseCRM{% endblock %}
+
+{%block content %}
+	<h1>Customers</h1>
+<div class="fade-in">
+	<p class="text-center text-muted">Currently managing <b>{{ customers|length }}</b> customers.</p>
+</div>
+	<div class="fade-in">
+		<table class="table table-striped table-hover table-bordered">
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Phone</th>
+				<th>Company</th>
+				<th>Notes</th>
+			</tr>
+			{% for customer in customers %} <!--Jinja2 template command; loops to create new row for every Customer. Jinja2 is the template engine Flask uses to mix Python and HTML--!>
+				<tr>
+					<td>{{ customer[0] }}</td> <!--customer_id-->
+					<td>{{ customer[1] }}</td> <!--customer_name-->
+					<td>{{ customer[2] }}</td> <!--email-->
+					<td>{{ customer[3] }}</td> <!--phone-->
+					<td>{{ customer[4] }}</td> <!--company-->
+					<td>{{ customer[5] }}</td> <!--notes-->
+					<td>
+						<a href="/edit-customer/{{ customer[0] }}" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></a>
+						<form action="/delete-customer/{{ customer[0] }}" method="POST" style="display:inline;">
+						<button class="btn btn-danger btn-sm" type="submit"><i class="fas fa-trash"></i></button>
+						</form>
+					</td>
+				</tr>
+			{% endfor %}
+		</table>
+	</div>
+	<footer class="text-center mt-5 mb-3 text-muted">
+    <p>&copy; 2025 PulseCRM. Built by Nashita Kausar with 💻 and ❤️.</p>
+    <a href="https://www.linkedin.com/in/nashita-kausar-524b87324/" target="_blank" class="text-muted me-3">LinkedIn</a>
+</footer>
+
+
+{% endblock %}
